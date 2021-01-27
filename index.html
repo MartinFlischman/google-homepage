@@ -15,66 +15,63 @@
 			href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+			integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+			crossorigin="anonymous"
+		/>
 	</head>
 
-	<body>
-		<header>
-			<nav>
-				<ul>
-					<li><a href="#">Gmail</a></li>
-					<li><a href="#">Images</a></li>
-					<li>
-						<a href="#"
-							><img
-								src="images/more.png"
-								alt="Image to expand more Google services."
-						/></a>
-					</li>
-					<li>
-						<a
-							class="profile"
-							href="https://github.com/MartinFlischman"
-							target="_blank"
-							><img
-								src="images/profile-img.png"
-								alt="Google account image/link."
-						/></a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-
-		<main>
-			<section class="search-form">
-				<img id="logo" src="images/google-logo.png" alt="Google Logo" />
-				<form action="">
-					<img
-						src="images/search.png"
-						alt="Magnifier/Search icon in search bar."
-					/>
-					<label for="searchText"></label>
-					<input type="search" name="searchText" id="searchText" required />
-					<button type="submit">Google Search</button>
-					<button type="submit">I'm Feeling Lucky</button>
-				</form>
-			</section>
-		</main>
-
-		<footer>
-			<div class="btmLeft">
-				<ul>
-					<li><a href="#">Advertising</a></li>
-					<li><a href="#">Business</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">How Search Works</a></li>
-				</ul>
+	<body class="text-gray-800 text-sm">
+		<header class="flex justify-between w-full">
+			<div class="flex space-x-4 p-6"></div>
+			<div class="flex">
+				<div class="flex space-x-4 p-6">
+					<a href="#" class="hover:underline">Gmail</a>
+					<a href="#" class="hover:underline">Images</a>
+					<a href="#" class="pl-2">
+						<img src="/images/more.png" alt="More Google services" />
+					</a>
+				</div>
+				<a href="#" class="pt-4 pr-8">
+					<img src="images/profile-img.png" alt="user" class="rounded-full" />
+				</a>
 			</div>
-			<div class="btmRight">
-				<ul>
-					<li><a href="#">Privacy</a></li>
-					<li><a href="#">Terms</a></li>
-					<li><a href="#">Settings</a></li>
-				</ul>
+		</header>
+		<main class="container px-8 mx-auto pt-24 max-w-xl flex flex-col space-y-6">
+			<img
+				src="images/google-logo.png"
+				alt="Google logo"
+				class="h-24 mx-auto"
+			/>
+			<div class="rounded-full py-2 px-4 flex border border-gray-300 transition-all duration-100 hover:shadow-md">
+				<div class="place-self-center text-gray-500 cursor-pointer">
+					<i class="fas fa-search text-lg"></i>
+				</div>
+				<div class="flex px-4 w-full">
+					<input
+						type="text"
+						class="w-full border-none outline-none text-base" />
+					</i>
+				</div>
+			</div>
+			<div class="mx-auto flex space-x-2">
+				<input type="submit" class="px-4 py-2 rounded bg-gray-100 cursor-pointer hover:['border-solid', 'border'] " value="Google Search">
+				<input type="submit" class="px-4 py-2 rounded bg-gray-100 cursor-pointer" value="I'm Feeling Lucky">
+			</div>
+		</main>
+		<footer class="flex justify-between absolute bottom-0 w-full bg-gray-100 leading-10 px-8 text-gray-500 border-t">
+			<div class="space-x-6">
+				<a href="#" class="hover:underline">Advertising</a>
+				<a href="#" class="hover:underline">Business</a>
+				<a href="#" class="hover:underline">About</a>
+				<a href="#" class="hover:underline">How Search works</a>
+			</div>
+			<div class="space-x-6">
+				<a href="#" class="hover:underline">Privacy</a>
+				<a href="#" class="hover:underline">Terms</a>
+				<a href="#" class="hover:underline">Settings</a>
 			</div>
 		</footer>
 	</body>
